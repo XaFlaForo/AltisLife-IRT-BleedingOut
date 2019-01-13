@@ -35,7 +35,7 @@ _Progress progressSetPosition 1;
 life_respawned = false;
 life_is_alive = false;
 
-//--- LOOP DEATHSCREEN I KNOW ITS FLAKY BUT I DONT CARE
+//--- LOOP DEATHSCREEN
 for "_i" from 0 to 1 step 0 do { 
     
     //--- SLEEP LITTLE BABY
@@ -44,7 +44,7 @@ for "_i" from 0 to 1 step 0 do {
     //--- DECREASE THE BAR I DONT CARE ABOUT YOUR PRECIOUS CONFIG
     _Progress = _Progress - 0.0000006;
 
-    //--- PLAYER JERKED OFF BY A MEDIC
+    //--- PLAYER REVIVED BY A MEDIC
     if(life_is_alive) exitWith {
             
         //--- CLOSE DIALOG
