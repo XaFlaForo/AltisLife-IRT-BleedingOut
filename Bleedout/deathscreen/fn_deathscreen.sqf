@@ -12,7 +12,7 @@ scopeName "main";
 params ["_unit"];
 
 //--- Get PARAMS AND MAKE SURE THEY ARE PASSED
-if !(params [ ["_unit"] ]) exitWith { systemChat "fuck remaking this shit its not working propely or your just a bad dev"; };
+if !(params [ ["_unit"] ]) exitWith { systemChat "THIS SCRIPT IS BROKE - ERROR IN CODE OR INSTALLED INCRORECTLY"; };
 
 //--- REMOVE HUD I HOPE
 [] call life_fnc_hudUpdate;
@@ -45,7 +45,8 @@ for "_i" from 0 to 1 step 0 do {
     _Progress = _Progress - 0.0000006;
 
     //--- PLAYER REVIVED BY A MEDIC
-    if(life_is_alive) exitWith {
+    if(life_is_alive) exitWith 
+    {
             
         //--- CLOSE DIALOG
         closeDialog 0;
@@ -55,7 +56,8 @@ for "_i" from 0 to 1 step 0 do {
    };
 
     //--- FORCE RESPAWN
-    if (_Progress <= 0.00007) exitWith {
+    if (_Progress <= 0.00007) exitWith 
+    {
            
            //--- FORCE RESPAWN
            forceRespawn player;
@@ -69,7 +71,8 @@ for "_i" from 0 to 1 step 0 do {
     };
     
     //--- CHECK CERATIN ARGUMENTS
-    if (_Progress <= 0.60007) then {
+    if (_Progress <= 0.60007) then 
+    {
 
         //--- UNBLOCK DA ESCAPE MENU
         (findDisplay 7300) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {false}"]; 
